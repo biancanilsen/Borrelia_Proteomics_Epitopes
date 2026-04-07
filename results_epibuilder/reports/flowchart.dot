@@ -1,0 +1,59 @@
+digraph "flowchart" {
+rankdir=TB;
+v0 [shape=point,label="",fixedsize=true,width=0.1];
+v1 [label="validate_fasta"];
+v0 -> v1 [label="input_fasta"];
+
+v1 [label="validate_fasta"];
+v3 [label="run_bepipred"];
+v1 -> v3;
+
+v1 [label="validate_fasta"];
+v2 [shape=point];
+v1 -> v2;
+
+v1 [label="validate_fasta"];
+v6 [label="run_epibuilder"];
+v1 -> v6;
+
+v3 [label="run_bepipred"];
+v6 [label="run_epibuilder"];
+v3 -> v6;
+
+v1 [label="validate_fasta"];
+v5 [label="run_localization"];
+v1 -> v5 [label="input_file"];
+
+v4 [shape=point,label="",fixedsize=true,width=0.1];
+v5 [label="run_localization"];
+v4 -> v5 [label="localization"];
+
+v5 [label="run_localization"];
+v6 [label="run_epibuilder"];
+v5 -> v6;
+
+v6 [label="run_epibuilder"];
+v8 [shape=point];
+v6 -> v8;
+
+v6 [label="run_epibuilder"];
+v9 [label="export_excel"];
+v6 -> v9;
+
+v6 [label="run_epibuilder"];
+v9 [label="export_excel"];
+v6 -> v9;
+
+v6 [label="run_epibuilder"];
+v9 [label="export_excel"];
+v6 -> v9;
+
+v6 [label="run_epibuilder"];
+v7 [shape=point];
+v6 -> v7;
+
+v9 [label="export_excel"];
+v10 [shape=point];
+v9 -> v10;
+
+}

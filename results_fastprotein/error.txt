@@ -1,0 +1,3 @@
+Phobius ver 1.01
+(c) 2004 Lukas Kall, Anders Krogh, Erik Sonnhammer
+
